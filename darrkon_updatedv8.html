@@ -9,7 +9,7 @@
   <link id="favicon" rel="icon" href="https://raw.githubusercontent.com/chromium/chromium/main/chrome/app/theme/default_200_percent/common/favicon_ntp.png">
   <style>
     :root{
-      /* Base (will be overwritten by theme switches) */
+      /* CSS by Qwen.ai and Jaydon Liu. THAT'S WHY IT LOOKS LIKE AI MAKE THE UI! */
       --bg: #0b0b0e;               /* page background */
       --bg2:#121218;               /* panels */
       --accent:#dc2626;            /* primary */
@@ -42,7 +42,7 @@
     .loading-progress{width:0%;height:100%;background:linear-gradient(90deg,#007fff,#4facfe);transition:width .2s ease}
     body.loaded .loading-screen{opacity:0;pointer-events:none;display:none!important}
 
-    /* PARTICLES CANVAS */
+    /* PARTICLES CANVASSSSS */
     #tsparticles{position:fixed;inset:0;z-index:-1}
 
     /* TOASTS (in-site notifications) */
@@ -137,33 +137,33 @@
   <div class="auth-overlay" id="authOverlay">
     <div class="auth-card" id="authCard">
       <div class="header">Password Protected</div>
-      <div class="subheader">Enter either access key to continue.</div>
+      <div class="subheader"></div>
       <div class="row" style="margin-top:10px">
         <input type="text" id="usernameInput" placeholder="Enter Username (optional)"/>
         <input type="password" id="passwordInput" placeholder="Enter Password"/>
       </div>
       <div class="row">
         <button class="btn prim" id="loginBtn">Login</button>
-        <button class="btn" id="hintBtn">Need a hint?</button>
+        <button class="btn" id="hintBtn"></button>
       </div>
       <div class="card" id="hintBox" style="display:none;margin-top:12px">Join the <a href="https://discord.gg/TwFuNQHPNd" target="_blank" class="btn" style="text-decoration:none">Discord</a> for the password, proxies, and more…</div>
     </div>
   </div>
 
-  <!-- TOPBAR TABS (EVERYTHING from both files) -->
+  <!-- TOPBAR TABS (EVERYTHING from both files  ) -->
   <div class="topbar" id="topbar" style="display:none">
     <button class="tabBtn active" onclick="showTab('homeTab', this)">Home</button>
     <button class="tabBtn" onclick="showTab('browserTab', this)">Browser</button>
     <button class="tabBtn" onclick="showTab('linksTab', this)">Links</button>
     <button class="tabBtn" onclick="showTab('gamesTab', this)">Games</button>
-    <button class="tabBtn" onclick="showTab('gamesLaunchTab', this)">More Games</button>
-    <button class="tabBtn" onclick="showTab('appsTab', this)">Apps/Stuff</button>
+    <button class="tabBtn" onclick="showTab('gamesLaunchTab', this)">More G@m3s</button>
+    <button class="tabBtn" onclick="showTab('appsTab', this)">Apps</button>
     <button class="tabBtn" onclick="showTab('toolsTab', this)">Tools/Coding</button>
     <button class="tabBtn" onclick="showTab('educationTab', this)">Education</button>
     <button class="tabBtn" onclick="showTab('musicLaunchTab', this)">Music</button>
     <button class="tabBtn" onclick="showTab('cloakTab', this)">Cloak</button>
     <button class="tabBtn" onclick="showTab('settingsTab', this)">Settings</button>
-    <button class="tabBtn" onclick="showTab('infocreditsTab', this)">Info</button>
+    <button class="tabBtn" onclick="showTab('infocreditsTab', this)">Info</button>  
   </div>
 
   <div class="page">
