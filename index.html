@@ -114,6 +114,11 @@
     /* FLOAT FULLSCREEN PAGE */
     .float-full{position:fixed;left:14px;bottom:14px;z-index:9997}
 
+    /* Quick Cloak uniform buttons */
+    .button-container{display:flex;flex-wrap:wrap;gap:8px}
+    .button-container .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px}
+    .button-container .btn .favicon{width:16px;height:16px}
+
     @media (max-width:720px){
       .header{font-size:26px}
       iframe{height:60vh}
@@ -157,7 +162,7 @@
     <button class="tabBtn" onclick="showTab('linksTab', this)">Links</button>
     <button class="tabBtn" onclick="showTab('gamesTab', this)">Games</button>
     <button class="tabBtn" onclick="showTab('gamesLaunchTab', this)">More G@m3s</button>
-    <button class="tabBtn" onclick="showTab('appsTab', this)">Apps</button>
+    <button class="tabBtn" onclick="showTab('appsTab', this)">Apps/Stuff</button>
     <button class="tabBtn" onclick="showTab('toolsTab', this)">Tools/Coding</button>
     <button class="tabBtn" onclick="showTab('educationTab', this)">Education</button>
     <button class="tabBtn" onclick="showTab('musicLaunchTab', this)">Music</button>
@@ -172,8 +177,10 @@
       <div class="container">
         <div class="header">Darrkon</div>
         <div class="subheader">Where shadows browse in peace, from the developers to a better Earth...</div>
-        <div class="badge">Developed by Darrkon Network <b>(New Update: Ultrakill and Roblox added)</b></div>
-        <p> <dev> <h0.1> </h0.1></dev></p>
+        <div class="badge">Developed by Darrkon Network <b>(New Update: Ultrakill and Roblox added,Fixed the UI,MAJOR UPDATE.)</b></div>
+        <p>
+          <div><span></span></div>
+        </p>
       </div>
     </div>
 
@@ -182,7 +189,7 @@
       <div class="container">
         <div class="header">Unblocked Browser!</div>
         <div class="row" style="margin-top:10px">
-          <input type="text" id="urlInput" placeholder="Enter URL or search…"/>
+          <input type="text" id="urlInput" placeholder="Enter URL or search... Auto https:// for you lazy slugs."/>
           <button class="btn" onclick="launchProxy()">Open</button>
         </div>
         <div class="row" style="margin-top:8px;flex-wrap:wrap">
@@ -305,6 +312,7 @@
           <button class="btn" data-app="Robloxxx" onclick="loadApp('https://files.catbox.moe/lwuvpr.txt')">Robl0x</button>
           <button class="btn" data-app="Robloxxxx" onclick="loadApp('https://electronicsarchiver.github.io/nptnk.github.io/')">Ultrakill Download ChromeOS</button>
           <button class="btn" data-app="Robloxxxxxx" onclick="loadApp('https://deltarunegame.github.io/')">Deltarune (In-browser) FULL</button>
+          <button class="btn" data-app="Robloxxxxxx" onclick="loadApp('https://darrkonnetwork.github.io/AdvancedG-m3s/')">Darrkon Cloud Gaming</button>
           
         </div>
         <div class="frame-wrap">
@@ -349,7 +357,7 @@
     <!-- MUSIC (from file 2) -->
     <div class="tab-content" id="musicLaunchTab">
       <div class="container">
-        <div class="header">Listen to music unblocked 🎶</div>
+        <div class="header">Listen to music unbl0cked 🎶</div>
         <div class="row" style="margin-top:10px;flex-wrap:wrap">
           <button class="btn" onclick="window.open('https://exploit-master122.github.io/AcoraV2/','_blank')">Acora v2</button>
           <button class="btn" onclick="toast('Go to https://shorturl.at/r37Qz')">FreeFy Music</button>
@@ -372,56 +380,56 @@
           <div class="row" style="flex-wrap:wrap">
 <div class="button-container">
   <button class="btn" onclick="setCloak('Google Docs', 'https://www.google.com/favicon.ico')">
-    <img class="favicon" src="https://www.google.com/favicon.ico"/>Google
+    <img class="favicon" src="https://www.google.com/favicon.ico" alt=""/>Google
   </button>
   <button class="btn" onclick="setCloak('Classroom', 'https://ssl.gstatic.com/classroom/favicon.png')">
-    <img class="favicon" src="https://ssl.gstatic.com/classroom/favicon.png"/>Home
+    <img class="favicon" src="https://ssl.gstatic.com/classroom/favicon.png" alt=""/>Home
   </button>
   <button class="btn" onclick="setCloak('Home', 'https://dogeub-v4-snowy.vercel.app/assets/img/docs.webp')">
-    <img class="favicon" src="https://schoolwork.broomleigh.org/assets/img/docs.webp"/>Google Docs
+    <img class="favicon" src="https://schoolwork.broomleigh.org/assets/img/docs.webp" alt=""/>Google Docs
   </button>
   <button class="btn" onclick="setCloak('New Tab', 'https://raw.githubusercontent.com/chromium/chromium/main/chrome/app/theme/default_200_percent/common/favicon_ntp.png')">
-    <img class="favicon" src="https://raw.githubusercontent.com/chromium/chromium/main/chrome/app/theme/default_200_percent/common/favicon_ntp.png"/>New Tab
+    <img class="favicon" src="https://raw.githubusercontent.com/chromium/chromium/main/chrome/app/theme/default_200_percent/common/favicon_ntp.png" alt=""/>New Tab
   </button>
   <button class="btn" onclick="setCloak('Aeries Login', 'https://castrovalleyusd.asp.aeries.net/student/images/Combomark_Transparent.svg')">
-    <img class="favicon" src="https://castrovalleyusd.asp.aeries.net/student/images/Combomark_Transparent.svg"/>Aeries Login
+    <img class="favicon" src="https://castrovalleyusd.asp.aeries.net/student/images/Combomark_Transparent.svg" alt=""/>Aeries Login
   </button>
   <button class="btn" onclick="setCloak('CPM Math', 'https://sso.cpm.org/images/CPMCompact.svg')">
-    <img class="favicon" src="https://sso.cpm.org/images/CPMCompact.svg"/>CPM Math
+    <img class="favicon" src="https://sso.cpm.org/images/CPMCompact.svg" alt=""/>CPM Math
   </button>
   <button class="btn" onclick="setCloak('Google Drive', 'https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png')">
-    <img class="favicon" src="https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png"/>Google Drive
+    <img class="favicon" src="https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" alt=""/>Google Drive
   </button>
   <button class="btn" onclick="setCloak('Google Slides', 'https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x32.png')">
-    <img class="favicon" src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x32.png"/>Google Slides
+    <img class="favicon" src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x32.png" alt=""/>Google Slides
   </button>
   <button class="btn" onclick="setCloak('Gmail', 'https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico')">
-    <img class="favicon" src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico"/>Gmail
+    <img class="favicon" src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt=""/>Gmail
   </button>
   <button class="btn" onclick="setCloak('YouTube', 'https://www.youtube.com/s/desktop/cd5cb204/img/logos/favicon_96x96.png')">
-    <img class="favicon" src="https://www.youtube.com/s/desktop/cd5cb204/img/logos/favicon_96x96.png"/>YouTube
+    <img class="favicon" src="https://www.youtube.com/s/desktop/cd5cb204/img/logos/favicon_96x96.png" alt=""/>YouTube
   </button>
   <button class="btn" onclick="setCloak('Khan Academy', 'https://www.khanacademy.org/favicon.ico')">
-    <img class="favicon" src="https://www.khanacademy.org/favicon.ico"/>Khan Academy
+    <img class="favicon" src="https://www.khanacademy.org/favicon.ico" alt=""/>Khan Academy
   </button>
   <button class="btn" onclick="setCloak('Outlook Mail', 'https://outlook.office365.com/owa/favicon.ico')">
-    <img class="favicon" src="https://outlook.office365.com/owa/favicon.ico"/>Outlook Mail
+    <img class="favicon" src="https://outlook.office365.com/owa/favicon.ico" alt=""/>Outlook Mail
   </button>
   <button class="btn" onclick="setCloak('Microsoft OneDrive', 'https://onedrive.live.com/favicon.ico')">
-    <img class="favicon" src="https://onedrive.live.com/favicon.ico"/>Microsoft OneDrive
+    <img class="favicon" src="https://onedrive.live.com/favicon.ico" alt=""/>Microsoft OneDrive
   </button>
   <button class="btn" onclick="setCloak('Scratch - Imagine, Program, Share', 'https://scratch.mit.edu/favicon.ico')">
-    <img class="favicon" src="https://scratch.mit.edu/favicon.ico"/>Scratch
+    <img class="favicon" src="https://scratch.mit.edu/favicon.ico" alt=""/>Scratch
   </button>
   <button class="btn" onclick="setCloak('GitHub', 'https://github.githubassets.com/favicons/favicon.svg')">
-    <img class="favicon" src="https://github.githubassets.com/favicons/favicon.svg"/>GitHub
+    <img class="favicon" src="https://github.githubassets.com/favicons/favicon.svg" alt=""/>GitHub
   </button>
   <button class="btn" onclick="setCloak('Calculator', 'https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_spreadsheet_x32.png')">
-    <img class="favicon" src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_spreadsheet_x32.png"/>Calculator
+    <img class="favicon" src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_spreadsheet_x32.png" alt=""/>Calculator
   </button>
 </div>
       </div>
-          <div class="subheader" style="margin-top:6px">Tab cloaking persists and updates favicon + title.</div>
+          <div class="subheader" style="margin-top:6px">Tab cloaking persists and updates from favicon + title.</div>
         </div>
       </div>
     </div>
@@ -480,9 +488,9 @@
     <div class="dot" title="Delicious Lavender!!" onclick="setTheme('Delicious Lavender!!')" style="background:linear-gradient(135deg,#c084fc,#9333ea)"></div>
     <div class="dot" title="Cyber Neon..." onclick="setTheme('Cyber Neon...')" style="background:linear-gradient(135deg,#06b6d4,#ec4899)"></div>
 
-    <!-- Backgrounds... -->
+    <!-- Backgrounds... (keep last four as BACKGROUNDS) -->
     <div class="dot" title="Blue Meteors" onclick="setTheme('Blue Meteors')" style="background:url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXgydDZkOW5jYXZqdGpraTg1OTYxZXhmajg3eW1ra2gxcThsNXduYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jaOXKCxtBPLieRLI0c/giphy.gif');background-size:cover;background-position:center"></div>
-    <div class="dot" title="Red Dystopia" onclick="setTheme('')" style="background:url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG40MWF1ZW5vMTU2N3R0bDQ1bHJuNmNybndiMHdsMnVkMTQxMXZibiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/WPwD0gdWFsNRy8LA2P/giphy.gif');background-size:cover;background-position:center"></div>
+    <div class="dot" title="Red Dystopia" onclick="setTheme('Red Dystopia')" style="background:url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG40MWF1ZW5vMTU2N3R0bDQ1bHJuNmNybndiMHdsMnVkMTQxMXZibiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/WPwD0gdWFsNRy8LA2P/giphy.gif');background-size:cover;background-position:center"></div>
     <div class="dot" title="Doge for Jaydon Haha..." onclick="setTheme('Doge...')" style="background:url('https://wallpapers.com/images/high/doge-mona-lisa-meme-pfqr9smne3m1nm7i.webp');background-size:cover;background-position:center"></div>
     <div class="dot" title="Cute Squirrel." onclick="setTheme('Cute Squirrel')" style="background:url('https://t4.ftcdn.net/jpg/16/35/21/87/360_F_1635218702_SuVcAxdRkktJvHZHH062dX50OdDJiD0k.jpg');background-size:cover;background-position:center"></div>
   </div>
@@ -519,6 +527,26 @@
               <button class="btn" onclick="setSearchEngine('Duckduckgo')">DuckDuckGo (proxied)</button>
             </div>
           </div>
+
+          <div class="card">
+            <h4>Loading Screen Behavior</h4>
+            <div class="row" style="align-items:center">
+              <span class="badge">Show loader on every tab/login</span>
+              <label class="switch" style="margin-left:8px">
+                <input id="loadEverySwitch" type="checkbox" onchange="toggleLoadEvery(this)"><span class="slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4>Data Transfer</h4>
+            <div class="row">
+              <button class="btn" onclick="exportAllData()">Export Data</button>
+              <input id="importFile" type="file" accept="application/json" style="display:none" onchange="importAllData(event)"/>
+              <button class="btn" onclick="document.getElementById('importFile').click()">Import Data</button>
+            </div>
+            <div class="subheader" style="margin-top:6px">Saves Darrkon (browser) data across different links.</div>
+          </div>
         </div>
         <div class="card" style="margin-top:12px">
           <div class="subheader">Press Ctrl+Q for Panic. "Leave site? Changes you made may not be saved" protection is enabled. Notifications are in-site, not browser popups (mostly).</div>
@@ -535,6 +563,16 @@
   <script>
     /* =============== QUOTES / LOADER =============== */
     const quotes=[
+      "Keeper of the Lost Cities is fire...Wait IS SOPHIE A PYROKINETIC?!",
+      "Estimated wait time is 1000000 Days...",
+      "Taylor Swift is actually good...(Welcome to New York)",
+      "I heard he could code without Stack Overflow! 😉",
+      "I TURNED 14!",
+      "<h1> Error: Loading screen failed <h1>",
+      "TypeError: Failedto-fetch NEVER AGAIN",
+      "I'm going to come into your house at night...",
+      "Most kids don't like taffy,I don't know why!!",
+      "Doing something?",
       "Watch Brooklyn Nine Nine, It's a really good comedy...",
       "Vplaza Gaming Sux...",
       "Long live Szvy's account!",
@@ -571,10 +609,24 @@
       "I wrote an essay called The Flaw in the System. I'm releasing it soon,it's fire.",
       "Is space waves really that good?",
       "Axiom Browser is coming!! (In 2028 lol)",
+      "I really like the girl at my schoo- I MEAN I REALLY LIKE THE CSS (Nervous Chuckle)",
       "Yo seach up rubbing hands gif :D",
       "Is now.gg overrated? Prob. BUT YOU CAN PLAY IT HERE! (Easyfun.gg Sucks...)",
       "The kids at my school are crazy. But seriously, I love you guys... Thanks for all the support, you know who you are!!"
     ];
+
+    function showLoaderNow(ms = 900){
+      const screen = document.getElementById('loadingScreen');
+      const bar = document.getElementById('loadingProgress');
+      const quoteEl = document.getElementById('loadingQuote');
+      const idx = Math.floor(Math.random()*quotes.length); quoteEl.textContent = quotes[idx];
+      bar.style.width = '0%';
+      screen.style.display = 'flex';
+      document.body.classList.remove('loaded');
+      let p=0; const iv=50; const steps = Math.max(1, ms/iv);
+      (function step(){ if(p>=100) return; p+=100/steps; bar.style.width = `${Math.min(p,100)}%`; setTimeout(step,iv); })();
+      setTimeout(()=>{ document.body.classList.add('loaded'); }, ms);
+    }
 
     document.addEventListener('DOMContentLoaded',()=>{
       const quoteEl=document.getElementById('loadingQuote');
@@ -595,7 +647,7 @@
     let particlesEnabled=true;
     const particlesInit=()=>{ tsParticles.load('tsparticles', particleOptions); };
     window.addEventListener('load', particlesInit);
-    function toggleParticles(){ particlesEnabled=!particlesEnabled; if(!particlesEnabled){ tsParticles.domItem(0)?.stop(); toast('Particles OFF'); } else { tsParticles.domItem(0)?.start(); toast('Particles ON'); } }
+    function toggleParticles(){ particlesEnabled=!particlesEnabled; if(!particlesEnabled){ tsParticles.domItem(0)?.stop(); toast('Particles OFF'); localStorage.setItem('particles','off'); } else { tsParticles.domItem(0)?.start(); toast('Particles ON'); localStorage.setItem('particles','on'); } }
 
     /* =============== IN-SITE TOASTS =============== */
     function toast(msg, ms=2600){
@@ -604,10 +656,26 @@
       wrap.appendChild(el); setTimeout(()=>{ el.style.opacity='.0'; el.style.transform='translateY(6px)'; setTimeout(()=>el.remove(),400); }, ms);
     }
 
-    /* =============== AUTH (All l0g1ns accepted.) =============== */
+    /* =============== SIMPLE PERSIST LAYER (IndexedDB + localStorage mirror) =============== */
+    const DB_NAME='darrkonDB', STORE='prefs';
+    let idb;
+    function dbOpen(){
+      return new Promise((resolve)=>{
+        const req = indexedDB.open(DB_NAME,1);
+        req.onupgradeneeded = ()=>{ req.result.createObjectStore(STORE); };
+        req.onsuccess = ()=>{ idb=req.result; resolve(); };
+        req.onerror = ()=>{ resolve(); };
+      });
+    }
+    function dbSet(key,val){ try{ const tx=idb.transaction(STORE,'readwrite'); tx.objectStore(STORE).put(val,key); }catch(e){} }
+    function dbGet(key){ return new Promise((res)=>{ try{ const tx=idb.transaction(STORE,'readonly'); const rq=tx.objectStore(STORE).get(key); rq.onsuccess=()=>res(rq.result); rq.onerror=()=>res(undefined); }catch(e){ res(undefined); } }); }
+
+    function savePref(key,val){ localStorage.setItem(key, typeof val==='string'? val: JSON.stringify(val)); dbSet(key,val); }
+
+    /* =============== AUTH (both passwords accepted) =============== */
     const PW1 = 'TitaniumNetworkSux';
     const PW2 = '5084820933';
-    const PW3 = 'Ch@rl0tt3ish0t';
+    const PW3 = 'Ch@rl0tt3ish0t...';
     const PW4 = 'Touchgrassnow!';
     const authOverlay = document.getElementById('authOverlay');
     const authCard = document.getElementById('authCard');
@@ -615,12 +683,12 @@
     const hintBtn = document.getElementById('hintBtn');
     const hintBox = document.getElementById('hintBox');
 
-    function unlock(){ authOverlay.classList.add('hidden'); document.getElementById('topbar').style.display='flex'; toast('Welcome to Darrkon ✨'); }
+    function unlock(){ authOverlay.classList.add('hidden'); document.getElementById('topbar').style.display='flex'; toast('Welcome to Darrkon ✨'); savePref('authLoggedIn', true); }
 
-    function checkPassword(){
+    async function checkPassword(){
       const pw=document.getElementById('passwordInput').value.trim();
       const user=document.getElementById('usernameInput').value.trim();
-      if(pw===PW1 || pw===PW2){ if(user) localStorage.setItem('username', user); unlock(); }
+      if(pw===PW1 || pw===PW2 || pw===PW3 || pw===PW4){ if(user) savePref('username', user); if(!getLoadEvery()) showLoaderNow(); unlock(); }
       else { authCard.classList.remove('shake'); void authCard.offsetWidth; authCard.classList.add('shake'); document.getElementById('passwordInput').value=''; }
     }
     loginBtn.addEventListener('click', checkPassword);
@@ -629,13 +697,15 @@
 
     /* =============== TABS =============== */
     function showTab(id,btn){
+      if(getLoadEvery()) showLoaderNow();
       document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       document.querySelectorAll('.tabBtn').forEach(b=>b.classList.remove('active'));
       btn?.classList.add('active');
+      savePref('currentTab', id);
     }
 
-    /* =============== PR0XY + SEARCH =============== */
+    /* =============== PROXY + SEARCH =============== */
     const searchEngines={
       SearXGerman:'https://uvv2.rhw.one/active/uv/service/hvtrs8%2F-pcungm.ko-',
       NormalGoogle:'https://www.google.com/search?q=',
@@ -644,10 +714,19 @@
     };
     let currentEngine = localStorage.getItem('searchEngine') || 'SearXGerman';
 
-    function setSearchEngine(engine){ currentEngine=engine; localStorage.setItem('searchEngine', engine); toast('Search engine set to '+engine); }
+    function setSearchEngine(engine){ currentEngine=engine; savePref('searchEngine', engine); toast('Search engine set to '+engine); }
 
     function selectedProxy(){ return document.querySelector('input[name="proxySelector"]:checked')?.value || localStorage.getItem('selectedProxy') || 'framevault'; }
-    function selectProxy(v){ const r=document.querySelector(`input[name="proxySelector"][value="${v}"]`); if(r){ r.checked=true; localStorage.setItem('selectedProxy', v); toast('Proxy set to '+v); } }
+    function selectProxy(v){ const r=document.querySelector(`input[name="proxySelector"][value="${v}"]`); if(r){ r.checked=true; savePref('selectedProxy', v); toast('Proxy set to '+v); } }
+
+    function buildFramevaultUrl(input){
+      const val = input.trim();
+      if(/^https?:\/\//i.test(val)) return val; // full URL already
+      // if it looks like a domain, auto https://
+      if(val.includes('.') && !val.includes(' ')) return 'https://' + val;
+      // otherwise treat as search
+      return searchEngines[currentEngine] + encodeURIComponent(val);
+    }
 
     function launchProxy(){
       const url = document.getElementById('urlInput').value.trim();
@@ -655,7 +734,7 @@
       const which = selectedProxy();
       if(!url){ toast('Enter a URL or search'); return; }
       switch(which){
-        case 'framevault': iframe.src = url.startsWith('http') ? url : searchEngines[currentEngine] + encodeURIComponent(url); break;
+        case 'framevault': iframe.src = buildFramevaultUrl(url); break;
         case 'rammerhead': iframe.src = 'https://108.181.32.77.nip.io/'; break;
         case 'helios': iframe.src = 'https://helios-browser.vercel.app/'; break;
         case 'shadow': iframe.src = 'https://shai.tecnova.com.br/'; break;
@@ -663,15 +742,16 @@
         case 'ultraviolet': iframe.src = 'https://uvv2.rhw.one/active/'; break;
         default: toast('Selected proxy is not available.');
       }
-      localStorage.setItem('selectedProxy', which);
+      savePref('selectedProxy', which);
     }
 
     /* =============== APPS SEARCH + LOAD =============== */
     function filterApps(){
       const q=document.getElementById('appSearch').value.toLowerCase();
       document.querySelectorAll('#appsButtons .btn').forEach(b=>{ const m=b.getAttribute('data-app')?.toLowerCase()||b.textContent.toLowerCase(); b.style.display = m.includes(q) ? 'inline-block':'none'; });
+      savePref('appSearchQuery', q);
     }
-    function loadApp(url){ document.getElementById('appsFrame').src = url; }
+    function loadApp(url){ document.getElementById('appsFrame').src = url; savePref('lastApp', url); }
 
     /* =============== FULLSCREEN HELPERS =============== */
     function toggleFullscreen(elId){
@@ -681,14 +761,16 @@
     }
 
     /* =============== CLOAKING (TITLE + FAVICON) =============== */
-    function setCloak(title, icon){ document.title=title; localStorage.setItem('cloakedTitle', title); if(icon){ const fav=document.getElementById('favicon'); fav.href=icon; localStorage.setItem('cloakedFavicon', icon); } toast('Cloaked as '+title); }
+    function setCloak(title, icon){ document.title=title; savePref('cloakedTitle', title); if(icon){ const fav=document.getElementById('favicon'); fav.href=icon; savePref('cloakedFavicon', icon); } toast('Cloaked as '+title); }
 
     /* =============== PANIC =============== */
-    function savePanicUrl(){ const v=document.getElementById('panicUrl').value.trim(); if(v){ localStorage.setItem('panicUrl', v); toast('Panic URL saved'); } }
+    function savePanicUrl(){ const v=document.getElementById('panicUrl').value.trim(); if(v){ savePref('panicUrl', v); toast('Panic URL saved'); } }
     function panic(){ const url= localStorage.getItem('panicUrl') || 'https://classroom.google.com'; window.open(url, '_blank'); }
     document.addEventListener('keydown', e=>{ if(e.ctrlKey && e.key.toLowerCase()==='q') panic(); if(e.key==='`') panic(); });
 
     /* =============== BACKGROUND / THEMES =============== */
+    function clearBg(){ document.body.style.backgroundImage=''; document.body.style.backgroundSize=''; document.body.style.backgroundRepeat=''; document.body.style.backgroundPosition=''; }
+
     function setCustomBackground(){
       const url=document.getElementById('customBgUrl').value.trim();
       if(!url){ toast('Enter a valid image URL'); return; }
@@ -696,12 +778,15 @@
       document.body.style.backgroundSize='cover';
       document.body.style.backgroundRepeat='no-repeat';
       document.body.style.backgroundPosition='center';
-      localStorage.setItem('customBgUrl', url); toast('Background set');
+      savePref('customBgUrl', url); toast('Background set');
+      savePref('theme','customBg');
     }
 
     function setTheme(which){
       let root=document.documentElement.style;
+      clearBg();
       switch(which){
+        case 'Bubblegum!':
         case 'bubblegum':
           root.setProperty('--bg', '#2a0b1a');
           root.setProperty('--bg2', '#3a1024');
@@ -709,6 +794,7 @@
           root.setProperty('--accent2', '#ff9ac1');
           root.setProperty('--glow', 'rgba(255,77,166,.6)');
           break;
+        case 'Dark Night (Batman)':
         case 'darknight':
           root.setProperty('--bg', '#000');
           root.setProperty('--bg2', '#111');
@@ -716,6 +802,7 @@
           root.setProperty('--accent2', '#bfbfbf');
           root.setProperty('--glow', 'rgba(191,191,191,.45)');
           break;
+        case 'Blue skies...smilin at me':
         case 'blueskies':
           root.setProperty('--bg', '#0b1220');
           root.setProperty('--bg2', '#0f1b2e');
@@ -723,12 +810,59 @@
           root.setProperty('--accent2', '#7dd3fc');
           root.setProperty('--glow', 'rgba(96,165,250,.55)');
           break;
+        case 'The OCEAN.':
         case 'ocean':
           root.setProperty('--bg', '#062335');
           root.setProperty('--bg2', '#0b3a4f');
           root.setProperty('--accent', '#0ea5e9');
           root.setProperty('--accent2', '#075985');
           root.setProperty('--glow', 'rgba(14,165,233,.55)');
+          break;
+        case 'Twilight.':
+          root.setProperty('--bg', '#2b0f05');
+          root.setProperty('--bg2', '#3b1607');
+          root.setProperty('--accent', '#f97316');
+          root.setProperty('--accent2', '#ea580c');
+          root.setProperty('--glow', 'rgba(234,88,12,.55)');
+          break;
+        case 'Yosemite forest.':
+          root.setProperty('--bg', '#0b1f14');
+          root.setProperty('--bg2', '#0f2c1b');
+          root.setProperty('--accent', '#22c55e');
+          root.setProperty('--accent2', '#166534');
+          root.setProperty('--glow', 'rgba(34,197,94,.55)');
+          break;
+        case 'Delicious Lavender!!':
+          root.setProperty('--bg', '#1a0f2b');
+          root.setProperty('--bg2', '#24123a');
+          root.setProperty('--accent', '#c084fc');
+          root.setProperty('--accent2', '#9333ea');
+          root.setProperty('--glow', 'rgba(147,51,234,.55)');
+          break;
+        case 'Cyber Neon...':
+          root.setProperty('--bg', '#0a1720');
+          root.setProperty('--bg2', '#101824');
+          root.setProperty('--accent', '#06b6d4');
+          root.setProperty('--accent2', '#ec4899');
+          root.setProperty('--glow', 'rgba(6,182,212,.55)');
+          break;
+        /* Backgrounds (last four) */
+        case 'Blue Meteors':
+          document.body.style.backgroundImage = "url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXgydDZkOW5jYXZqdGpraTg1OTYxZXhmajg3eW1ra2gxcThsNXduYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jaOXKCxtBPLieRLI0c/giphy.gif')";
+          document.body.style.backgroundSize='cover'; document.body.style.backgroundRepeat='no-repeat'; document.body.style.backgroundPosition='center';
+          break;
+        case 'Red Dystopia':
+        case '':
+          document.body.style.backgroundImage = "url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG40MWF1ZW5vMTU2N3R0bDQ1bHJuNmNybndiMHdsMnVkMTQxMXZibiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/WPwD0gdWFsNRy8LA2P/giphy.gif')";
+          document.body.style.backgroundSize='cover'; document.body.style.backgroundRepeat='no-repeat'; document.body.style.backgroundPosition='center';
+          break;
+        case 'Doge...':
+          document.body.style.backgroundImage = "url('https://wallpapers.com/images/high/doge-mona-lisa-meme-pfqr9smne3m1nm7i.webp')";
+          document.body.style.backgroundSize='cover'; document.body.style.backgroundRepeat='no-repeat'; document.body.style.backgroundPosition='center';
+          break;
+        case 'Cute Squirrel':
+          document.body.style.backgroundImage = "url('https://t4.ftcdn.net/jpg/16/35/21/87/360_F_1635218702_SuVcAxdRkktJvHZHH062dX50OdDJiD0k.jpg')";
+          document.body.style.backgroundSize='cover'; document.body.style.backgroundRepeat='no-repeat'; document.body.style.backgroundPosition='center';
           break;
         default:
           root.setProperty('--bg', '#0b0b0e');
@@ -738,25 +872,87 @@
           root.setProperty('--glow', 'rgba(220,38,38,.6)');
       }
       toast('Theme applied');
+      savePref('theme', which);
     }
 
     /* =============== ADBLOCK SWITCH =============== */
-    function adBlockToggle(el){ if(el.checked){ window.open('https://chromewebstore.google.com/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg?hl=de','_blank'); toast('Opening AdGuard in new tab'); } else { toast('AdBlocker switch OFF'); } }
+    function adBlockToggle(el){ if(el.checked){ window.open('https://chromewebstore.google.com/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg?hl=de','_blank'); toast('Opening AdGuard in new tab'); savePref('adblock','on'); } else { toast('AdBlocker switch OFF'); savePref('adblock','off'); } }
+
+    /* =============== LOADER SWITCH =============== */
+    function getLoadEvery(){ return localStorage.getItem('loadEvery') === 'true'; }
+    function toggleLoadEvery(el){ savePref('loadEvery', !!el.checked); toast(el.checked? 'Loader on every action':'Loader only on login'); }
+
+    /* =============== DATA EXPORT / IMPORT =============== */
+    async function exportAllData(){
+      const data = { localStorage: {}, indexedDB: {} };
+      for(let i=0;i<localStorage.length;i++){ const k=localStorage.key(i); data.localStorage[k]=localStorage.getItem(k); }
+      // best-effort dump of our store
+      try{
+        await dbOpen();
+        await new Promise((resolve)=>{
+          const tx=idb.transaction(STORE,'readonly');
+          const req=tx.objectStore(STORE).getAllKeys();
+          req.onsuccess=()=>{
+            const keys=req.result||[]; let remaining=keys.length; if(!remaining){ resolve(); return; }
+            keys.forEach(k=>{
+              const r2=tx.objectStore(STORE).get(k);
+              r2.onsuccess=()=>{ data.indexedDB[k]=r2.result; if(--remaining===0) resolve(); };
+              r2.onerror=()=>{ if(--remaining===0) resolve(); };
+            });
+          };
+          req.onerror=()=>resolve();
+        });
+      }catch(e){}
+      const blob = new Blob([JSON.stringify(data,null,2)], {type:'application/json'});
+      const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='darrkon-data.json'; a.click(); URL.revokeObjectURL(a.href);
+      toast('Data exported');
+    }
+
+    async function importAllData(evt){
+      const file = evt.target.files?.[0]; if(!file) return; const txt = await file.text();
+      try{
+        const obj = JSON.parse(txt);
+        if(obj.localStorage){ Object.entries(obj.localStorage).forEach(([k,v])=>localStorage.setItem(k,v)); }
+        await dbOpen();
+        if(obj.indexedDB){ Object.entries(obj.indexedDB).forEach(([k,v])=>dbSet(k,v)); }
+        toast('Data imported. Reloading…'); setTimeout(()=>location.reload(), 600);
+      }catch(e){ toast('Invalid JSON'); }
+    }
 
     /* =============== ACCOUNT / DATA =============== */
-    function clearAuth(){ localStorage.removeItem('username'); document.getElementById('passwordInput').value=''; document.getElementById('usernameInput').value=''; document.getElementById('topbar').style.display='none'; authOverlay.classList.remove('hidden'); toast('Logged out'); }
+    function clearAuth(){ localStorage.removeItem('username'); localStorage.removeItem('authLoggedIn'); document.getElementById('passwordInput').value=''; document.getElementById('usernameInput').value=''; document.getElementById('topbar').style.display='none'; authOverlay.classList.remove('hidden'); toast('Logged out'); }
     function resetAll(){ localStorage.clear(); toast('All local data cleared'); setTimeout(()=>location.reload(),400); }
 
     /* =============== ON LOAD (restore cloak + panic + background + theme + proxy) =============== */
-    window.addEventListener('load',()=>{
+    window.addEventListener('load',async ()=>{
+      await dbOpen();
+      // Merge from IDB to localStorage if missing (survive cookie-only clears)
+      const keysToHydrate=['username','authLoggedIn','cloakedTitle','cloakedFavicon','panicUrl','customBgUrl','selectedProxy','searchEngine','theme','particles','currentTab','adblock','loadEvery','appSearchQuery','lastApp'];
+      for(const k of keysToHydrate){ const v = await dbGet(k); if(v!==undefined && localStorage.getItem(k)===null){ localStorage.setItem(k, typeof v==='string'? v: JSON.stringify(v)); } }
+
       // Persist cloak
       const savedTitle=localStorage.getItem('cloakedTitle'); if(savedTitle) document.title=savedTitle; const fav=localStorage.getItem('cloakedFavicon'); if(fav) document.getElementById('favicon').href=fav;
       // Panic URL
       document.getElementById('panicUrl').value = localStorage.getItem('panicUrl') || 'https://classroom.google.com';
-      // Background
-      const bg=localStorage.getItem('customBgUrl'); if(bg){ document.body.style.backgroundImage=`url('${bg}')`; document.body.style.backgroundSize='cover'; document.body.style.backgroundRepeat='no-repeat'; document.body.style.backgroundPosition='center'; }
+      // Background or theme
+      const theme=localStorage.getItem('theme'); if(theme){ setTheme(theme); }
+      const bg=localStorage.getItem('customBgUrl'); if(bg && theme==='customBg'){ document.body.style.backgroundImage=`url('${bg}')`; document.body.style.backgroundSize='cover'; document.body.style.backgroundRepeat='no-repeat'; document.body.style.backgroundPosition='center'; }
       // Proxy
       const savedProxy = localStorage.getItem('selectedProxy') || 'framevault'; const radio=document.querySelector(`input[name="proxySelector"][value="${savedProxy}"]`); if(radio) radio.checked=true;
+      // Search engine
+      currentEngine = localStorage.getItem('searchEngine') || currentEngine;
+      // Particles
+      const p=localStorage.getItem('particles'); if(p==='off'){ try{ tsParticles.domItem(0)?.stop(); particlesEnabled=false; }catch(e){} }
+      // Loader switch
+      const le = getLoadEvery(); const sw=document.getElementById('loadEverySwitch'); if(sw) sw.checked=le;
+      // Restore app search
+      const q=localStorage.getItem('appSearchQuery'); if(q){ const el=document.getElementById('appSearch'); if(el){ el.value=q; filterApps(); } }
+      // Restore last app
+      const last=localStorage.getItem('lastApp'); if(last){ const f=document.getElementById('appsFrame'); if(f) f.src=last; }
+      // Auto unlock if logged in (IDB survives cookie delete)
+      const logged = localStorage.getItem('authLoggedIn')==='true'; if(logged){ unlock(); }
+      // Restore tab
+      const tab=localStorage.getItem('currentTab'); if(tab){ const btn=[...document.querySelectorAll('.tabBtn')].find(b=>b.getAttribute('onclick')?.includes(tab)); if(btn){ showTab(tab,btn); } else { showTab('homeTab', document.querySelector('.tabBtn')); } }
     });
 
     /* =============== LEAVE SITE PROTECTION =============== */
