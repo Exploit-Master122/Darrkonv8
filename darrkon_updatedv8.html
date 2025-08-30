@@ -456,31 +456,37 @@
             <div style="margin-top:6px;font-size:13px;opacity:.85">Press <b>Ctrl + Q</b> (or <b>`</b>) anytime to trigger...</div>
           </div>
 
-          <div class="card">
-            <h4>Customize Look</h4>
-            <div class="row"><input type="text" id="customBgUrl" placeholder="Image/GIF URL for background"/><button class="btn" onclick="setCustomBackground()">Install Theme</button></div>
-            <div class="row" style="margin-top:8px"><button class="btn" onclick="toggleParticles()">Toggle Particles (Fixed Soon)</button></div>
-            <div style="margin-top:8px">Themes:</div>
-            <div class="theme-dots" style="margin-top:6px">
-            <div class="dot" title="Default" onclick="setTheme('default')" style="background:linear-gradient(135deg,#0b0b0e,#121218)"></div>
-            <div class="dot" title="Bubblegum" onclick="setTheme('bubblegum')" style="background:linear-gradient(135deg,#ff9ac1,#ff4da6)"></div>
-            <div class="dot" title="Dark Night" onclick="setTheme('darknight')" style="background:linear-gradient(135deg,#000,#1b1b1b)"></div>
-            <div class="dot" title="Blue Skies" onclick="setTheme('blueskies')" style="background:linear-gradient(135deg,#7dd3fc,#60a5fa)"></div>
-            <div class="dot" title="Raging Ocean" onclick="setTheme('ocean')" style="background:linear-gradient(135deg,#0ea5e9,#075985)"></div>
+  <div class="card">
+  <h4>Customize Look</h4>
+  <div class="row">
+    <input type="text" id="customBgUrl" placeholder="Image/GIF URL for background"/>
+    <button class="btn" onclick="setCustomBackground()">Install Theme</button>
+  </div>
+  <div class="row" style="margin-top:8px">
+    <button class="btn" onclick="toggleParticles()">Toggle Particles (Fixed Soon)</button>
+  </div>
+  <div style="margin-top:8px">Themes:</div>
+  <div class="theme-dots" style="margin-top:6px">
+    <div class="dot" title="Default (DarrkonKillerRed)" onclick="setTheme('Darrkonkiller.red')" style="background:linear-gradient(135deg,#0b0b0e,#121218)"></div>
+    <div class="dot" title="Bubblegum (tastes good)" onclick="setTheme('Bubblegum!')" style="background:linear-gradient(135deg,#ff9ac1,#ff4da6)"></div>
+    <div class="dot" title="Dark Night (batman)" onclick="setTheme('Dark Night (Batman)')" style="background:linear-gradient(135deg,#000,#1b1b1b)"></div>
+    <div class="dot" title="Blue skies...smilin at me" onclick="setTheme('Blue skies...smilin at me')" style="background:linear-gradient(135deg,#7dd3fc,#60a5fa)"></div>
+    <div class="dot" title="The OCEAN." onclick="setTheme('The OCEAN.')" style="background:linear-gradient(135deg,#0ea5e9,#075985)"></div>
 
-             <!-- Added themes -->
-            <div class="dot" title="Sunset" onclick="setTheme('sunset')" style="background:linear-gradient(135deg,#f97316,#ea580c)"></div>
-            <div class="dot" title="Forest" onclick="setTheme('forest')" style="background:linear-gradient(135deg,#22c55e,#166534)"></div>
-            <div class="dot" title="Lavender" onclick="setTheme('lavender')" style="background:linear-gradient(135deg,#c084fc,#9333ea)"></div>
-            <div class="dot" title="Midnight Purple" onclick="setTheme('midnightpurple')" style="background:linear-gradient(135deg,#4c1d95,#1e1b4b)"></div>
-            <div class="dot" title="Cyber Neon" onclick="setTheme('cyberneon')" style="background:linear-gradient(135deg,#06b6d4,#ec4899)"></div>
+    <!-- Added themes -->
+    <div class="dot" title="Twilight." onclick="setTheme('Twilight.')" style="background:linear-gradient(135deg,#f97316,#ea580c)"></div>
+    <div class="dot" title="Yosemite forest." onclick="setTheme('Yosemite forest.')" style="background:linear-gradient(135deg,#22c55e,#166534)"></div>
+    <div class="dot" title="Delicious Lavender!!" onclick="setTheme('Delicious Lavender!!')" style="background:linear-gradient(135deg,#c084fc,#9333ea)"></div>
+    <div class="dot" title="Cyber Neon..." onclick="setTheme('Cyber Neon...')" style="background:linear-gradient(135deg,#06b6d4,#ec4899)"></div>
 
-            <!-- Image URL Themes -->
-           <div class="dot" title="Galaxy" onclick="setTheme('galaxy')" style="background:url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');background-size:cover;background-position:center"></div>
-           <div class="dot" title="Mountains" onclick="setTheme('mountains')" style="background:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');background-size:cover;background-position:center"></div>
+    <!-- Image URL Themes -->
+    <div class="dot" title="Blue Meteors" onclick="setTheme('Blue Meteors')" style="background:url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXgydDZkOW5jYXZqdGpraTg1OTYxZXhmajg3eW1ra2gxcThsNXduYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jaOXKCxtBPLieRLI0c/giphy.gif');background-size:cover;background-position:center"></div>
+    <div class="dot" title="Red Dystopia" onclick="setTheme('')" style="background:url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG40MWF1ZW5vMTU2N3R0bDQ1bHJuNmNybndiMHdsMnVkMTQxMXZibiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/WPwD0gdWFsNRy8LA2P/giphy.gif');background-size:cover;background-position:center"></div>
+    <div class="dot" title="Doge for Jaydon Haha..." onclick="setTheme('Doge...')" style="background:url('https://wallpapers.com/images/high/doge-mona-lisa-meme-pfqr9smne3m1nm7i.webp');background-size:cover;background-position:center"></div>
+    <div class="dot" title="Cute Squirrel." onclick="setTheme('Cute Squirrel')" style="background:url('https://t4.ftcdn.net/jpg/16/35/21/87/360_F_1635218702_SuVcAxdRkktJvHZHH062dX50OdDJiD0k.jpg');background-size:cover;background-position:center"></div>
+  </div>
+</div>
 
-            </div>
-          </div>
 
           <div class="card">
             <h4>Ad Blocker</h4>
