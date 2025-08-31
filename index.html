@@ -190,7 +190,7 @@
       <div class="container">
         <div class="header">Unblocked Browser!</div>
         <div class="row" style="margin-top:10px">
-          <input type="text" id="urlInput" placeholder="Enter URL or search... Auto https:// for you lazy slugs."/>
+          <input type="text" id="urlInput" placeholder="Enter URL or search... Auto https:// for you lazy slugs.To search,enter Swisscows.com!"/>
           <button class="btn" onclick="launchProxy()">Open</button>
         </div>
         <div class="row" style="margin-top:8px;flex-wrap:wrap">
@@ -198,7 +198,7 @@
           <button class="btn" onclick="selectProxy('ultraviolet')">Ultraviolet</button>
           <button class="btn" onclick="selectProxy('rammerhead')">Rammerhead</button>
           <button class="btn" onclick="selectProxy('helios')">Helios</button>
-          <button class="btn" onclick="selectProxy('shadow')">ShadowOS</button>
+          <button class="btn" onclick="selectProxy('shadow')">AmplifyUV</button>
           <button class="btn" onclick="selectProxy('wombatserver')">WOMGNIX</button>
           <button class="btn prim" onclick="toggleFullscreen('mainFrame')">Fullscreen</button>
         </div>
@@ -479,33 +479,33 @@
   <!-- Themes Section -->
   <div style="margin-top:8px">Themes:</div>
   <div class="theme-dots" style="margin-top:6px">
-    <div class="dot" title="Default (DarrkonKillerRed)" onclick="setTheme('Darrkonkiller.red')" style="background:linear-gradient(135deg,#0b0b0e,#121218)"></div>
-    <div class="dot" title="Bubblegum (tastes good)" onclick="setTheme('Bubblegum!')" style="background:linear-gradient(135deg,#ff9ac1,#ff4da6)"></div>
-    <div class="dot" title="Dark Night (batman)" onclick="setTheme('Dark Night (Batman)')" style="background:linear-gradient(135deg,#000,#1b1b1b)"></div>
-    <div class="dot" title="Blue skies...smilin at me" onclick="setTheme('Blue skies...smilin at me')" style="background:linear-gradient(135deg,#7dd3fc,#60a5fa)"></div>
-    <div class="dot" title="The OCEAN." onclick="setTheme('The OCEAN.')" style="background:linear-gradient(135deg,#0ea5e9,#075985)"></div>
-    <div class="dot" title="Twilight." onclick="setTheme('Twilight.')" style="background:linear-gradient(135deg,#f97316,#ea580c)"></div>
-    <div class="dot" title="Yosemite forest." onclick="setTheme('Yosemite forest.')" style="background:linear-gradient(135deg,#22c55e,#166534)"></div>
-    <div class="dot" title="Delicious Lavender!!" onclick="setTheme('Delicious Lavender!!')" style="background:linear-gradient(135deg,#c084fc,#9333ea)"></div>
-    <div class="dot" title="Cyber Neon..." onclick="setTheme('Cyber Neon...')" style="background:linear-gradient(135deg,#06b6d4,#ec4899)"></div>
+    <div class="dot" title="Default (DarrkonKillerRed)" onclick='setTheme("Darrkonkiller.red")' style="background:linear-gradient(135deg,#0b0b0e,#121218)"></div>
+    <div class="dot" title="Bubblegum (tastes good)" onclick='setTheme("Bubblegum!")' style="background:linear-gradient(135deg,#ff9ac1,#ff4da6)"></div>
+    <div class="dot" title="Dark Night (batman)" onclick='setTheme("Dark Night (Batman)")' style="background:linear-gradient(135deg,#000,#1b1b1b)"></div>
+    <div class="dot" title="Blue skies...smilin at me" onclick='setTheme("Blue skies...smilin at me")' style="background:linear-gradient(135deg,#7dd3fc,#60a5fa)"></div>
+    <div class="dot" title="The OCEAN." onclick='setTheme("The OCEAN.")' style="background:linear-gradient(135deg,#0ea5e9,#075985)"></div>
+    <div class="dot" title="Twilight." onclick='setTheme("Twilight.")' style="background:linear-gradient(135deg,#f97316,#ea580c)"></div>
+    <div class="dot" title="Yosemite forest." onclick='setTheme("Yosemite forest.")' style="background:linear-gradient(135deg,#22c55e,#166534)"></div>
+    <div class="dot" title="Delicious Lavender!!" onclick='setTheme("Delicious Lavender!!")' style="background:linear-gradient(135deg,#c084fc,#9333ea)"></div>
+    <div class="dot" title="Cyber Neon..." onclick='setTheme("Cyber Neon...")' style="background:linear-gradient(135deg,#06b6d4,#ec4899)"></div>
   </div>
 
- <!-- Backgrounds Section -->
+  <!-- Backgrounds Section -->
   <div style="margin-top:12px">Backgrounds:</div>
   <div class="theme-dots" style="margin-top:6px">
-    <div class="dot" title="Blue Meteors" onclick="setTheme('Blue Meteors')" style="background:url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXgydDZkOW5jYXZqdGpraTg1OTYxZXhmajg3eW1ra2gxcThsNXduYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jaOXKCxtBPLieRLI0c/giphy.gif');background-size:cover;background-position:center"></div>
+    <div class="dot" title="Blue Meteors" onclick='setTheme("Blue Meteors")' style="background:url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXgydDZkOW5jYXZqdGpraTg1OTYxZXhmajg3eW1ra2gxcThsNXduYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jaOXKCxtBPLieRLI0c/giphy.gif');background-size:cover;background-position:center"></div>
 
-    <div class="dot" title="Don't want to study (Anya Forger)" onclick="setTheme('Dont want to study (Anya Forger)')" style="background:url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExazI4YTh0dGs5eGJvZXI1NGFiZHZmNDk4OTJsMG1vZGoxa29odWsyYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/u2Hq7bqjWWL8oWFz1T/giphy.gif');background-size:cover;background-position:center"></div>
+    <div class="dot" title="Don't want to study (Anya Forger)" onclick='setTheme("Dont want to study (Anya Forger)")' style="background:url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExazI4YTh0dGs5eGJvZXI1NGFiZHZmNDk4OTJsMG1vZGoxa29odWsyYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/u2Hq7bqjWWL8oWFz1T/giphy.gif');background-size:cover;background-position:center"></div>
 
-    <div class="dot" title="Red Dystopia" onclick="setTheme('Red Dystopia')" style="background:url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG40MWF1ZW5vMTU2N3R0bDQ1bHJuNmNybndiMHdsMnVkMTQxMXZibiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/WPwD0gdWFsNRy8LA2P/giphy.gif');background-size:cover;background-position:center"></div>
+    <div class="dot" title="Red Dystopia" onclick='setTheme("Red Dystopia")' style="background:url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG40MWF1ZW5vMTU2N3R0bDQ1bHJuNmNybndiMHdsMnVkMTQxMXZibiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/WPwD0gdWFsNRy8LA2P/giphy.gif');background-size:cover;background-position:center"></div>
 
-    <div class="dot" title="Doge for Jaydon Haha..." onclick="setTheme('Doge for Jaydon Haha...')" style="background:url('https://transcode-v2.app.engoo.com/image/fetch/f_auto,c_lfill,w_300,dpr_1/https://assets.app.engoo.com/organizations/5d2656f1-9162-461d-88c7-b2505623d8cb/images/2YcjMiWiJMGI36fisbtlZJ.jpeg');background-size:cover;background-position:center"></div>
+    <div class="dot" title="Doge for Jaydon Haha..." onclick='setTheme("Doge for Jaydon Haha...")' style="background:url('https://transcode-v2.app.engoo.com/image/fetch/f_auto,c_lfill,w_300,dpr_1/https://assets.app.engoo.com/organizations/5d2656f1-9162-461d-88c7-b2505623d8cb/images/2YcjMiWiJMGI36fisbtlZJ.jpeg');background-size:cover;background-position:center"></div>
 
-    <div class="dot" title="Cute Squirrel!" onclick="setTheme('Cute Squirrel!')" style="background:url('https://t4.ftcdn.net/jpg/16/35/21/87/360_F_1635218702_SuVcAxdRkktJvHZHH062dX50OdDJiD0k.jpg');background-size:cover;background-position:center"></div>
+    <div class="dot" title="Cute Squirrel!" onclick='setTheme("Cute Squirrel!")' style="background:url('https://t4.ftcdn.net/jpg/16/35/21/87/360_F_1635218702_SuVcAxdRkktJvHZHH062dX50OdDJiD0k.jpg');background-size:cover;background-position:center"></div>
 
-    <div class="dot" title="FunnyGojo.jpg" onclick="setTheme('FunnyGojo.jpg')" style="background:url('https://media.tenor.com/hW_mTYy_zS4AAAAj/gojo-satoru.gif');background-size:cover;background-position:center"></div>
+    <div class="dot" title="FunnyGojo.jpg" onclick='setTheme("FunnyGojo.jpg")' style="background:url('https://media.tenor.com/hW_mTYy_zS4AAAAj/gojo-satoru.gif');background-size:cover;background-position:center"></div>
   </div>
-</div>
+
 
                   
           <!-- Adblocker Part... -->
@@ -526,7 +526,7 @@
               <label><input type="radio" name="proxySelector" value="rammerhead"> Rammerhead (Simon Cheng) – Good for Discord/GFN.</label>
               <label><input type="radio" name="proxySelector" value="ultraviolet"> Ultraviolet (Jaydon Lui) – Fast loading for for Crazygames/ChatGPT.</label>
               <label><input type="radio" name="proxySelector" value="helios"> Helios – CORS pr0xy method.</label>
-              <label><input type="radio" name="proxySelector" value="shadow"> Space Browser.Helios,but UV,and better!</label>
+              <label><input type="radio" name="proxySelector" value="shadow"> Space Browser.Helios,but UV,and better! (AmplifyUV)</label>
               <label><input type="radio" name="proxySelector" value="wombatserver"> WOMGNIX – Wombatserver + NGINX mix.</label>
             </div>
           </div>
@@ -536,7 +536,7 @@
             <div class="row" style="flex-wrap:wrap">
               <button class="btn" onclick="setSearchEngine('SearXGerman')">SearXNG (German)</button>
               <button class="btn" onclick="setSearchEngine('NormalGoogle')">Google</button>
-              <button class="btn" onclick="setSearchEngine('Swisscows')">SwissCows</button>
+              <button class="btn" onclick="setSearchEngine('Swisscows')">SwissCows(best)</button>
               <button class="btn" onclick="setSearchEngine('Duckduckgo')">DuckDuckGo (proxied)</button>
             </div>
           </div>
@@ -691,7 +691,7 @@
 
     function savePref(key,val){ localStorage.setItem(key, typeof val==='string'? val: JSON.stringify(val)); dbSet(key,val); }
 
-    /* =============== AUTH (both passwords accepted) =============== */
+    /* =============== AUTH (ALL p@ssw0rds acc3p13d) =============== */
     const PW1 = 'TitaniumNetworkSux';
     const PW2 = '5084820933';
     const PW3 = 'Ch@rl0tt3ish0t...';
