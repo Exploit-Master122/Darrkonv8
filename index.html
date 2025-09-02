@@ -158,8 +158,8 @@
       <div class="container">
         <div class="header">Darrkon</div>
         <div class="subheader">Where shadows browse in peace, from the developers to a better Earth...</div>
-        <div class="badge">Developed by Darrkon Network <b>(New Update: Ultrakill and Darrkon Game Dashboard, Fixed the UI,MAJOR UPDATES!)</b></div>
-        <div class="subheader">Version 9.4 (v9.4)</div>
+        <div class="badge">Developed by Darrkon Network <b>(New Update: Ultrakill and more games (In Development)</b></div>
+        <div class="subheader">Version 9.5 (v9.5) BETA</div>
         <p>
           <div><span></span></div>
         </p>
@@ -446,7 +446,7 @@
 <div class="card">
   <h4>Customize Look</h4>
   <div class="row">
-    <input type="text" id="customBgUrl" placeholder="Image/GIF URL for background"/>
+    <input type="text" id="customBgUrl" placeholder="Image/GIF URL for wallpaper"/>
     <button class="btn" onclick="setCustomBackground()">Install Theme</button>
   </div>
   <div class="row" style="margin-top:8px">
@@ -459,7 +459,7 @@
       <input id="customMouseSwitch" type="checkbox" onchange="toggleCustomMouse()">Custom Mouse Cursor
       <span class="slider"></span>
     </label>
-    <div class="subheader" style="margin-top:6px;font-size:12px;opacity:.85">Enables a transparent overlay of your mouse.</div>
+    <div class="subheader" style="margin-top:6px;font-size:12px;opacity:.85">Enables a better-looking version of the Szvy Central Mouse cursor.(In beta)</div>
   </div>
   <!-- ||End|| -->
   
@@ -882,7 +882,7 @@
             data.localStorage[k]=localStorage.getItem(k);
         }
       }
-      // best-effort dump of our store
+      // Loading Settings...
       try{
         await dbOpen();
         await new Promise((resolve)=>{
