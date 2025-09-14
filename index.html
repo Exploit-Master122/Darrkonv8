@@ -17,8 +17,11 @@
       --text:#f7f7fb;              /* foreground */
       --muted:#1d1d24;             /* muted blocks */
       --border:#2a2a34;            /* borders */
-      --glow: rgba(220, 38, 38, .6);
+      --glow: rgba(220, 38, 38, .6);       /* glow color */
       --radius:16px;
+      /* Custom Mouse Cursor Colors */
+      --mouse-primary: #dc2626;    /* Default mouse primary color */
+      --mouse-secondary: #ef4444;  /* Default mouse secondary color */
     }
     *{ box-sizing:border-box; }
     html,body{ height:100%; }
@@ -105,6 +108,34 @@
     .custom-cloak-inputs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; align-items: center; }
     .custom-cloak-inputs input[type="text"] { flex: 1; min-width: 150px; padding: 10px 12px; }
     .custom-cloak-inputs .btn { padding: 10px 12px; }
+    /* Custom Mouse Preview */
+    .mouse-preview {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--mouse-primary);
+      box-shadow: 0 0 10px var(--mouse-secondary), 0 0 20px var(--mouse-secondary);
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    /* Mouse Style Preview */
+    .mouse-style-preview {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        vertical-align: middle;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .laser-preview {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8' fill='%23dc2626'/%3E%3Ccircle cx='12' cy='12' r='4' fill='%23ef4444'/%3E%3C/svg%3E");
+    }
+    .szvy-preview {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'%3E%3Cpath d='M16,0C7.164,0,0,7.164,0,16s7.164,16,16,16s16-7.164,16-16S24.836,0,16,0z M16,28C9.383,28,4,22.617,4,16S9.383,4,16,4 s12,5.383,12,12S22.617,28,16,28z' fill='%23dc2626'/%3E%3Cpath d='M16,6c-5.523,0-10,4.477-10,10s4.477,10,10,10s10-4.477,10-10S21.523,6,16,6z M16,24c-4.418,0-8-3.582-8-8s3.582-8,8-8 s8,3.582,8,8S20.418,24,16,24z' fill='%23ef4444'/%3E%3Cpath d='M16,10c-3.314,0-6,2.686-6,6s2.686,6,6,6s6-2.686,6-6S19.314,10,16,10z M16,20c-2.209,0-4-1.791-4-4s1.791-4,4-4 s4,1.791,4,4S18.209,20,16,20z' fill='%23dc2626'/%3E%3C/svg%3E");
+    }
     @media (max-width:720px){
       .header{font-size:26px}
       iframe{height:60vh}
@@ -148,18 +179,20 @@
     <button class="tabBtn" onclick="showTab('toolsTab', this)">Tools/Coding</button>
     <button class="tabBtn" onclick="showTab('educationTab', this)">Education</button>
     <button class="tabBtn" onclick="showTab('musicLaunchTab', this)">Music</button>
+    <button class="tabBtn" onclick="showTab('movieTab', this)">Media</button> <!-- New Movie and TV Tab Button -->
+    <button class="tabBtn" onclick="showTab('aiTab', this)">AI</button> <!-- New AI Tab Button -->
     <button class="tabBtn" onclick="showTab('cloakTab', this)">Cloak</button>
     <button class="tabBtn" onclick="showTab('settingsTab', this)">Settings</button>
-    <button class="tabBtn" onclick="showTab('infocreditsTab', this)">Info</button>  
-  </div>
+    <button class="tabBtn" onclick="showTab('infocreditsTab', this)">Info</button>
+    </div>
   <div class="page">
     <!-- HOME -->
     <div class="tab-content active" id="homeTab">
       <div class="container">
         <div class="header">Darrkon</div>
         <div class="subheader">Where shadows browse in peace, from the developers to a better Earth...</div>
-        <div class="badge">Developed by Darrkon Network <b>(New Update: Ultrakill and more games (In Development)</b></div>
-        <div class="subheader">Version 9.5 (v9.5) BETA</div>
+        <div class="badge">Developed by Darrkon Network <b>(New Update: Movies,FULL ULTRAKILL,and Flicker AI.)</b></div>
+        <div class="subheader">Version 9.6 (v9.6) BETA</div>
         <p>
           <div><span></span></div>
         </p>
@@ -232,7 +265,7 @@
     <!-- MORE GAMES (from file 2) -->
     <div class="tab-content" id="gamesLaunchTab">
       <div class="container">
-        <div class="header">Launch the Games!! (In development,for now, This is a double cloak of Darrkon.)</div>
+        <div class="header">Launch the Games!! (In beta,for now, a double cloaker)</div>
         <div class="row" style="justify-content:center;margin-top:20px;">
           <button class="btn prim" onclick="launchMoreGames()">Launch More Games</button>
         </div>
@@ -329,7 +362,31 @@
         <div class="header">Listen to music unbl0cked 🎶</div>
         <div class="row" style="margin-top:10px;flex-wrap:wrap">
           <button class="btn" onclick="window.open('https://exploit-master122.github.io/AcoraV2/','_blank')">Acora v2</button>
-          <button class="btn" onclick="toast('Go to https://shorturl.at/r37Qz')">FreeFy Music</button>
+          <button class="btn" onclick="toast('Go to https://shorturl.at/r37Qz')">FreeFy Music (BEST)</button>
+        </div>
+      </div>
+    </div>
+    <!-- MOVIE TAB (New) -->
+    <div class="tab-content" id="movieTab">
+      <div class="container">
+        <div class="header">Watch Movies and TV Unbl0ck3d... 🖥️</div>
+        <div class="frame-wrap">
+          <div class="frame-actions">
+            <button class="btn prim" onclick="toggleFullscreen('movieFrame')">Fullscreen</button>
+          </div>
+          <iframe id="movieFrame" src="https://televis10n.vercel.app/"></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- AI TAB (New) -->
+    <div class="tab-content" id="aiTab">
+      <div class="container">
+        <div class="header">AI Chat,Powered by Flicker AI. ⚙️</div>
+        <div class="frame-wrap">
+          <div class="frame-actions">
+            <button class="btn prim" onclick="toggleFullscreen('aiFrame')">Fullscreen</button>
+          </div>
+          <iframe id="aiFrame" src="https://flicker.chat/"></iframe>
         </div>
       </div>
     </div>
@@ -345,64 +402,44 @@
         </div>
         <div class="card" style="margin-top:12px">
           <h4>Quick Cloaking</h4>
-          <div class="row" style="flex-wrap:wrap">
-<div class="button-container">
-  <button class="btn" onclick="setCloak('Google Docs', 'https://www.google.com/favicon.ico')">
+          <div class="row" style="flex-wrap:wrap"> <div class="button-container">   <button class="btn" onclick="setCloak('Google Docs', 'https://www.google.com/favicon.ico')">
     <img class="favicon" src="https://www.google.com/favicon.ico" alt=""/>Google
-  </button>
-  <button class="btn" onclick="setCloak('Classroom', 'https://ssl.gstatic.com/classroom/favicon.png')">
+  </button>   <button class="btn" onclick="setCloak('Classroom', 'https://ssl.gstatic.com/classroom/favicon.png')">
     <img class="favicon" src="https://ssl.gstatic.com/classroom/favicon.png" alt=""/>Home
-  </button>
-  <button class="btn" onclick="setCloak('Home', 'https://dogeub-v4-snowy.vercel.app/assets/img/docs.webp')">
+  </button>   <button class="btn" onclick="setCloak('Home', 'https://dogeub-v4-snowy.vercel.app/assets/img/docs.webp')">
     <img class="favicon" src="https://schoolwork.broomleigh.org/assets/img/docs.webp" alt=""/>Google Docs
-  </button>
-  <button class="btn" onclick="setCloak('New Tab', 'https://raw.githubusercontent.com/chromium/chromium/main/chrome/app/theme/default_200_percent/common/favicon_ntp.png')">
+  </button>   <button class="btn" onclick="setCloak('New Tab', 'https://raw.githubusercontent.com/chromium/chromium/main/chrome/app/theme/default_200_percent/common/favicon_ntp.png')">
     <img class="favicon" src="https://raw.githubusercontent.com/chromium/chromium/main/chrome/app/theme/default_200_percent/common/favicon_ntp.png" alt=""/>New Tab
-  </button>
-  <button class="btn" onclick="setCloak('Aeries Login', 'https://castrovalleyusd.asp.aeries.net/student/images/Combomark_Transparent.svg')">
+  </button>   <button class="btn" onclick="setCloak('Aeries Login', 'https://castrovalleyusd.asp.aeries.net/student/images/Combomark_Transparent.svg')">
     <img class="favicon" src="https://castrovalleyusd.asp.aeries.net/student/images/Combomark_Transparent.svg" alt=""/>Aeries Login
-  </button>
-  <button class="btn" onclick="setCloak('CPM Math', 'https://sso.cpm.org/images/CPMCompact.svg')">
+  </button>   <button class="btn" onclick="setCloak('CPM Math', 'https://sso.cpm.org/images/CPMCompact.svg')">
     <img class="favicon" src="https://sso.cpm.org/images/CPMCompact.svg" alt=""/>CPM Math
-  </button>
-  <button class="btn" onclick="setCloak('Google Drive', 'https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png')">
+  </button>   <button class="btn" onclick="setCloak('Google Drive', 'https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png')">
     <img class="favicon" src="https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" alt=""/>Google Drive
-  </button>
-  <button class="btn" onclick="setCloak('Google Slides', 'https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x32.png')">
+  </button>   <button class="btn" onclick="setCloak('Google Slides', 'https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x32.png')">
     <img class="favicon" src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x32.png" alt=""/>Google Slides
-  </button>
-  <button class="btn" onclick="setCloak('Gmail', 'https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico')">
+  </button>   <button class="btn" onclick="setCloak('Gmail', 'https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico')">
     <img class="favicon" src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt=""/>Gmail
-  </button>
-  <button class="btn" onclick="setCloak('YouTube', 'https://www.youtube.com/s/desktop/cd5cb204/img/logos/favicon_96x96.png')">
+  </button>   <button class="btn" onclick="setCloak('YouTube', 'https://www.youtube.com/s/desktop/cd5cb204/img/logos/favicon_96x96.png')">
     <img class="favicon" src="https://www.youtube.com/s/desktop/cd5cb204/img/logos/favicon_96x96.png" alt=""/>YouTube
-  </button>
-  <button class="btn" onclick="setCloak('Khan Academy', 'https://www.khanacademy.org/favicon.ico')">
+  </button>   <button class="btn" onclick="setCloak('Khan Academy', 'https://www.khanacademy.org/favicon.ico')">
     <img class="favicon" src="https://www.khanacademy.org/favicon.ico" alt=""/>Khan Academy
-  </button>
-  <button class="btn" onclick="setCloak('Outlook Mail', 'https://outlook.office365.com/owa/favicon.ico')">
+  </button>   <button class="btn" onclick="setCloak('Outlook Mail', 'https://outlook.office365.com/owa/favicon.ico')">
     <img class="favicon" src="https://outlook.office365.com/owa/favicon.ico" alt=""/>Outlook Mail
-  </button>
-  <button class="btn" onclick="setCloak('Microsoft OneDrive', 'https://onedrive.live.com/favicon.ico')">
+  </button>   <button class="btn" onclick="setCloak('Microsoft OneDrive', 'https://onedrive.live.com/favicon.ico')">
     <img class="favicon" src="https://onedrive.live.com/favicon.ico" alt=""/>Microsoft OneDrive
-  </button>
-  <button class="btn" onclick="setCloak('Scratch - Imagine, Program, Share', 'https://scratch.mit.edu/favicon.ico')">
+  </button>   <button class="btn" onclick="setCloak('Scratch - Imagine, Program, Share', 'https://scratch.mit.edu/favicon.ico')">
     <img class="favicon" src="https://scratch.mit.edu/favicon.ico" alt=""/>Scratch
-  </button>
-  <button class="btn" onclick="setCloak('GitHub', 'https://github.githubassets.com/favicons/favicon.svg')">
+  </button>   <button class="btn" onclick="setCloak('GitHub', 'https://github.githubassets.com/favicons/favicon.svg')">
     <img class="favicon" src="https://github.githubassets.com/favicons/favicon.svg" alt=""/>GitHub
-  </button>
-  <button class="btn" onclick="setCloak('Calculator', 'https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_spreadsheet_x32.png')">
-    <img class="favicon" src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_spreadsheet_x32.png" alt=""/>Calculator
-  </button>
-  <button class="btn" onclick="setCloak('', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==')">
+  </button>   <button class="btn" onclick="setCloak('Darrkon', 'https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNjg3MWIwNDk5NGQ0ODE5MWIyZWVjZTg2OTI1NDQ4YTI6ZmlsZV8wMDAwMDAwMDk5MDQ2MWZkOWM2ZWEwMDEwMTQ3NzBjMSIsInRzIjoiNDg4MzAwIiwicCI6InB5aSIsImNpZCI6IjEiLCJzaWciOiJiMDI2NGIzYzUzYjRhNzQ2NGQxZTVkNmI1NTU2MWFjNWY0NWYzN2QzNTg5MmUyNDE4OGIyMGNmNTk2NDM3MzAwIiwidiI6IjAiLCJnaXptb19pZCI6bnVsbCwiY3AiOm51bGwsIm1hIjpudWxsfQ==')">
+    <img class="favicon" src="https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNjg3MWIwNDk5NGQ0ODE5MWIyZWVjZTg2OTI1NDQ4YTI6ZmlsZV8wMDAwMDAwMDk5MDQ2MWZkOWM2ZWEwMDEwMTQ3NzBjMSIsInRzIjoiNDg4MzAwIiwicCI6InB5aSIsImNpZCI6IjEiLCJzaWciOiJiMDI2NGIzYzUzYjRhNzQ2NGQxZTVkNmI1NTU2MWFjNWY0NWYzN2QzNTg5MmUyNDE4OGIyMGNmNTk2NDM3MzAwIiwidiI6IjAiLCJnaXptb19pZCI6bnVsbCwiY3AiOm51bGwsIm1hIjpudWxsfQ==" alt=""/>Default Darrkon
+  </button>   <button class="btn" onclick="setCloak('Darrkon', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==')">
     <img class="favicon" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""/>Blank Cloak
-  </button>
-  <button class="btn" onclick="setCloak('Document - Microsoft Word', 'https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_word_x32.png')">
+  </button>   <button class="btn" onclick="setCloak('Document - Microsoft Word', 'https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_word_x32.png')">
     <img class="favicon" src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_word_x32.png" alt=""/>Microsoft Word
-  </button>
+  </button> </div>
 </div>
-      </div>
           <div class="subheader" style="margin-top:6px">Tab cloaking persists and updates from favicon + title.</div>
         </div>
         <div class="card" style="margin-top:12px">
@@ -452,17 +489,40 @@
   <div class="row" style="margin-top:8px">
     <button class="btn" onclick="toggleParticles()">Toggle Particles (Fixed Soon)</button>
   </div>
-    <!-- CustomMouse v3.2 -->
-  
-  <div class="row" style="margin-top:10px">
+
+  <!-- CustomMouse v3.3 -->
+  <div class="row" style="margin-top:10px; align-items: center;">
     <label class="switch">
-      <input id="customMouseSwitch" type="checkbox" onchange="toggleCustomMouse()">Custom Mouse Cursor
-      <span class="slider"></span>
+      <input id="customMouseSwitch" type="checkbox" onchange="toggleCustomMouse()"><span class="slider"></span>
     </label>
-    <div class="subheader" style="margin-top:6px;font-size:12px;opacity:.85">Enables a better-looking version of the Szvy Central Mouse cursor.(In beta)</div>
+    <div style="margin-left: 10px;">Custom Mouse Cursor</div>
   </div>
+  <div class="row" style="margin-top:10px; align-items: center;">
+    <div class="mouse-style-preview laser-preview" id="mouseStylePreview"></div>
+    <div style="flex-grow: 1;">
+      <label style="display: block; margin-bottom: 5px;">Mouse Style:</label>
+      <select id="mouseStyleSelect" onchange="updateMouseStyle()" style="width: 100%; padding: 5px;">
+        <option value="laser">Laser Pointer</option>
+        <option value="szvy">Szvy Cursor</option>
+      </select>
+    </div>
+    <button class="btn" style="margin-left: 10px;" onclick="applyMouseStyle()">Apply Style</button>
+  </div>
+  <div class="row" style="margin-top:10px; align-items: center;">
+    <div class="mouse-preview" id="mouseColorPreview"></div>
+    <div style="flex-grow: 1;">
+      <label style="display: block; margin-bottom: 5px;">Primary Color:</label>
+      <input type="color" id="mousePrimaryColor" value="#dc2626" onchange="updateMouseColors()" style="width: 100%;">
+    </div>
+    <div style="flex-grow: 1; margin-left: 10px;">
+      <label style="display: block; margin-bottom: 5px;">Secondary Color:</label>
+      <input type="color" id="mouseSecondaryColor" value="#ef4444" onchange="updateMouseColors()" style="width: 100%;">
+    </div>
+    <button class="btn" style="margin-left: 10px;" onclick="applyMouseColors()">Apply Colors</button>
+  </div>
+  <div class="subheader" style="margin-top:6px;font-size:12px;opacity:.85">Enables a better-looking version of the Szvy Central Mouse cursor.(In beta)</div>
   <!-- ||End|| -->
-  
+
   <!-- Themes Section -->
   <div style="margin-top:8px">Themes:</div>
   <div class="theme-dots" style="margin-top:6px">
@@ -663,23 +723,41 @@
     /* =============== AUTH (ALL p@ssw0rds acc3p13d) =============== */
     const PW1 = 'TitaniumNetworkSux';
     const PW2 = '5084820933';
-    const PW3 = 'CharlotteSoe-ishot...';
+    const PW3 = 'Ch@rl0tt3ish0t...';
     const PW4 = 'Touchgrassnow!';
     const authOverlay = document.getElementById('authOverlay');
     const authCard = document.getElementById('authCard');
     const loginBtn = document.getElementById('loginBtn');
     const hintBtn = document.getElementById('hintBtn');
     const hintBox = document.getElementById('hintBox');
-    function unlock(){ authOverlay.classList.add('hidden'); document.getElementById('topbar').style.display='flex'; toast('Welcome to Darrkon ✨'); savePref('authLoggedIn', true); }
+    function unlock(){
+      authOverlay.classList.add('hidden');
+      document.getElementById('topbar').style.display='flex';
+      toast('Welcome to Darrkon ✨');
+      savePref('authLoggedIn', true);
+    }
     async function checkPassword(){
       const pw=document.getElementById('passwordInput').value.trim();
       const user=document.getElementById('usernameInput').value.trim();
-      if(pw===PW1 || pw===PW2 || pw===PW3 || pw===PW4){ if(user) savePref('username', user); if(!getLoadEvery()) showLoaderNow(); unlock(); }
-      else { authCard.classList.remove('shake'); void authCard.offsetWidth; authCard.classList.add('shake'); document.getElementById('passwordInput').value=''; }
+      if(pw===PW1 || pw===PW2 || pw===PW3 || pw===PW4){
+        if(user) savePref('username', user);
+        if(!getLoadEvery()) showLoaderNow();
+        unlock();
+      }
+      else {
+        authCard.classList.remove('shake');
+        void authCard.offsetWidth;
+        authCard.classList.add('shake');
+        document.getElementById('passwordInput').value='';
+      }
     }
     loginBtn.addEventListener('click', checkPassword);
-    hintBtn.addEventListener('click', ()=>{ hintBox.style.display = hintBox.style.display==='none'||!hintBox.style.display ? 'block':'none'; });
-    document.addEventListener('keydown', e=>{ if(e.key==='Enter' && !authOverlay.classList.contains('hidden')) checkPassword(); });
+    hintBtn.addEventListener('click', ()=>{
+      hintBox.style.display = hintBox.style.display==='none'||!hintBox.style.display ? 'block':'none';
+    });
+    document.addEventListener('keydown', e=>{
+      if(e.key==='Enter' && !authOverlay.classList.contains('hidden')) checkPassword();
+    });
     /* =============== TABS =============== */
     function showTab(id,btn){
       if(getLoadEvery()) showLoaderNow();
@@ -697,9 +775,22 @@
       Duckduckgo:'https://womginx.arph.org/main/https://start.duckduckgo.com/'
     };
     let currentEngine = localStorage.getItem('searchEngine') || 'SearXGerman';
-    function setSearchEngine(engine){ currentEngine=engine; savePref('searchEngine', engine); toast('Search engine set to '+engine); }
-    function selectedProxy(){ return document.querySelector('input[name="proxySelector"]:checked')?.value || localStorage.getItem('selectedProxy') || 'framevault'; }
-    function selectProxy(v){ const r=document.querySelector(`input[name="proxySelector"][value="${v}"]`); if(r){ r.checked=true; savePref('selectedProxy', v); toast('Proxy set to '+v); } }
+    function setSearchEngine(engine){
+      currentEngine=engine;
+      savePref('searchEngine', engine);
+      toast('Search engine set to '+engine);
+    }
+    function selectedProxy(){
+      return document.querySelector('input[name="proxySelector"]:checked')?.value || localStorage.getItem('selectedProxy') || 'framevault';
+    }
+    function selectProxy(v){
+      const r=document.querySelector(`input[name="proxySelector"][value="${v}"]`);
+      if(r){
+        r.checked=true;
+        savePref('selectedProxy', v);
+        toast('Proxy set to '+v);
+      }
+    }
     function buildFramevaultUrl(input){
       const val = input.trim();
       if(/^https?:\/\//i.test(val)) return val; // full URL already
@@ -712,7 +803,10 @@
       const url = document.getElementById('urlInput').value.trim();
       const iframe = document.getElementById('mainFrame');
       const which = selectedProxy();
-      if(!url){ toast('Enter a URL or search'); return; }
+      if(!url){
+        toast('Enter a URL or search');
+        return;
+      }
       switch(which){
         case 'framevault': iframe.src = buildFramevaultUrl(url); break;
         case 'rammerhead': iframe.src = 'https://darrkonpr0xy.vercel.app/rammerheadshark.html'; break;
@@ -727,24 +821,34 @@
     /* =============== APPS SEARCH + LOAD =============== */
     function filterApps(){
       const q=document.getElementById('appSearch').value.toLowerCase();
-      document.querySelectorAll('#appsButtons .btn').forEach(b=>{ const m=b.getAttribute('data-app')?.toLowerCase()||b.textContent.toLowerCase(); b.style.display = m.includes(q) ? 'inline-block':'none'; });
+      document.querySelectorAll('#appsButtons .btn').forEach(b=>{
+        const m=b.getAttribute('data-app')?.toLowerCase()||b.textContent.toLowerCase();
+        b.style.display = m.includes(q) ? 'inline-block':'none';
+      });
       savePref('appSearchQuery', q);
     }
-    function loadApp(url){ document.getElementById('appsFrame').src = url; savePref('lastApp', url); }
+    function loadApp(url){
+      document.getElementById('appsFrame').src = url;
+      savePref('lastApp', url);
+    }
     /* =============== MORE GAMES LAUNCH =============== */
     function launchMoreGames(){
       showLoaderNow(30000);
       setTimeout(() => {
         const frameWrap = document.getElementById('moreGamesFrameWrap');
         frameWrap.style.display = 'block';
-        document.getElementById('moreGamesFrame').src = 'https://exploit-master122.github.io/Darrkonv8/';
+        document.getElementById('moreGamesFrame').src = 'https://darrkonv9.vercel.app';
       }, 30000);
     }
     /* =============== FULLSCREEN HELPERS =============== */
     function toggleFullscreen(elId){
       let el = (elId==='html')? document.documentElement : document.getElementById(elId);
-      if(!document.fullscreenElement){ (el.requestFullscreen? el.requestFullscreen(): el.webkitRequestFullscreen?.()).catch?.(e=>toast('Fullscreen error')); }
-      else { document.exitFullscreen?.(); }
+      if(!document.fullscreenElement){
+        (el.requestFullscreen? el.requestFullscreen(): el.webkitRequestFullscreen?.()).catch?.(e=>toast('Fullscreen error'));
+      }
+      else {
+        document.exitFullscreen?.();
+      }
     }
     /* =============== CLOAKING (TITLE + FAVICON) =============== */
     function setCloak(title, icon){
@@ -760,14 +864,35 @@
         toast('Cloaked as '+ (title || 'untitled'));
     }
     /* =============== PANIC =============== */
-    function savePanicUrl(){ const v=document.getElementById('panicUrl').value.trim(); if(v){ savePref('panicUrl', v); toast('Panic URL saved'); } }
-    function panic(){ const url= localStorage.getItem('panicUrl') || 'https://classroom.google.com'; window.open(url, '_blank'); }
-    document.addEventListener('keydown', e=>{ if(e.ctrlKey && e.key.toLowerCase()==='q') panic(); if(e.key==='`') panic(); });
+    function savePanicUrl(){
+      const v=document.getElementById('panicUrl').value.trim();
+      if(v){
+        savePref('panicUrl', v);
+        toast('Panic URL saved');
+      }
+    }
+    function panic(){
+      const url= localStorage.getItem('panicUrl') || 'https://classroom.google.com';
+      window.open(url, '_blank');
+    }
+    document.addEventListener('keydown', e=>{
+      if(e.ctrlKey && e.key.toLowerCase()==='q') panic();
+      if(e.key==='`') panic();
+    });
     /* =============== BACKGROUND / THEMES =============== */
-    function clearBg(){ document.body.style.backgroundImage=''; document.body.style.backgroundSize=''; document.body.style.backgroundRepeat=''; document.body.style.backgroundPosition=''; document.body.style.background='radial-gradient(1200px 800px at 10% -10%, rgba(220,38,38,.15), transparent 60%), radial-gradient(1000px 600px at 110% 10%, rgba(99,102,241,.12), transparent 60%), linear-gradient(135deg, var(--bg) 0%, var(--bg2) 100%)'; }
+    function clearBg(){
+      document.body.style.backgroundImage='';
+      document.body.style.backgroundSize='';
+      document.body.style.backgroundRepeat='';
+      document.body.style.backgroundPosition='';
+      document.body.style.background='radial-gradient(1200px 800px at 10% -10%, rgba(220,38,38,.15), transparent 60%), radial-gradient(1000px 600px at 110% 10%, rgba(99,102,241,.12), transparent 60%), linear-gradient(135deg, var(--bg) 0%, var(--bg2) 100%)';
+    }
     function setCustomBackground(){
       const url=document.getElementById('customBgUrl').value.trim();
-      if(!url){ toast('Enter a valid image URL'); return; }
+      if(!url){
+        toast('Enter a valid image URL');
+        return;
+      }
       document.body.style.backgroundImage = `url('${url}')`;
       document.body.style.backgroundSize='cover';
       document.body.style.backgroundRepeat='no-repeat';
@@ -869,10 +994,24 @@
       savePref('theme', which);
     }
     /* =============== ADBLOCK SWITCH =============== */
-    function adBlockToggle(el){ if(el.checked){ window.open('https://chromewebstore.google.com/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg?hl=de','_blank'); toast('Opening AdGuard in new tab'); savePref('adblock','on'); } else { toast('AdBlocker switch OFF'); savePref('adblock','off'); } }
+    function adBlockToggle(el){
+      if(el.checked){
+        window.open('https://chromewebstore.google.com/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg?hl=de','_blank');
+        toast('Opening AdGuard in new tab');
+        savePref('adblock','on');
+      } else {
+        toast('AdBlocker switch OFF');
+        savePref('adblock','off');
+      }
+    }
     /* =============== LOADER SWITCH =============== */
-    function getLoadEvery(){ return localStorage.getItem('loadEvery') === 'true'; }
-    function toggleLoadEvery(el){ savePref('loadEvery', !!el.checked); toast(el.checked? 'Loader on every action':'Loader only on login'); }
+    function getLoadEvery(){
+      return localStorage.getItem('loadEvery') === 'true';
+    }
+    function toggleLoadEvery(el){
+      savePref('loadEvery', !!el.checked);
+      toast(el.checked? 'Loader on every action':'Loader only on login');
+    }
     /* =============== DATA EXPORT / IMPORT =============== */
     async function exportAllData(){
       const data = { localStorage: {}, indexedDB: {} };
@@ -924,11 +1063,22 @@
                 }
             });
         }
-        toast('Data imported. Reloading…'); setTimeout(()=>location.reload(), 600);
-      }catch(e){ toast('Invalid JSON: ' + e.message); } // More informative error
+        toast('Data imported. Reloading…');
+        setTimeout(()=>location.reload(), 600);
+      }catch(e){
+        toast('Invalid JSON: ' + e.message); // More informative error
+      }
     }
     /* =============== ACCOUNT / DATA =============== */
-    function clearAuth(){ localStorage.removeItem('username'); localStorage.removeItem('authLoggedIn'); document.getElementById('passwordInput').value=''; document.getElementById('usernameInput').value=''; document.getElementById('topbar').style.display='none'; authOverlay.classList.remove('hidden'); toast('Logged out'); }
+    function clearAuth(){
+      localStorage.removeItem('username');
+      localStorage.removeItem('authLoggedIn');
+      document.getElementById('passwordInput').value='';
+      document.getElementById('usernameInput').value='';
+      document.getElementById('topbar').style.display='none';
+      authOverlay.classList.remove('hidden');
+      toast('Logged out');
+    }
     function resetAll(){
         if (confirm("Are you sure you want to clear ALL local data? This cannot be undone.")) {
             localStorage.clear();
@@ -949,11 +1099,88 @@
             }
         }
     }
+
+    /* =============== CUSTOM MOUSE CURSOR =============== */
+    function toggleCustomMouse() {
+      const isEnabled = document.getElementById('customMouseSwitch').checked;
+      savePref('customMouseEnabled', isEnabled);
+      applyCustomMouseStyles();
+      toast(isEnabled ? 'Custom mouse ON' : 'Custom mouse OFF');
+    }
+
+    function updateMouseStyle() {
+      const style = document.getElementById('mouseStyleSelect').value;
+      document.getElementById('mouseStylePreview').className = 'mouse-style-preview ' + style + '-preview';
+    }
+
+    function applyMouseStyle() {
+      const style = document.getElementById('mouseStyleSelect').value;
+      savePref('mouseStyle', style);
+      applyCustomMouseStyles();
+      toast('Mouse style saved');
+    }
+
+    function updateMouseColors() {
+      const primaryColor = document.getElementById('mousePrimaryColor').value;
+      const secondaryColor = document.getElementById('mouseSecondaryColor').value;
+      document.documentElement.style.setProperty('--mouse-primary', primaryColor);
+      document.documentElement.style.setProperty('--mouse-secondary', secondaryColor);
+      document.getElementById('mouseColorPreview').style.background = primaryColor;
+      document.getElementById('mouseColorPreview').style.boxShadow = `0 0 10px ${secondaryColor}, 0 0 20px ${secondaryColor}`;
+    }
+
+    function applyMouseColors() {
+      const primaryColor = document.getElementById('mousePrimaryColor').value;
+      const secondaryColor = document.getElementById('mouseSecondaryColor').value;
+      savePref('mousePrimaryColor', primaryColor);
+      savePref('mouseSecondaryColor', secondaryColor);
+      toast('Mouse colors saved');
+    }
+
+    function applyCustomMouseStyles() {
+      const isEnabled = localStorage.getItem('customMouseEnabled') === 'true';
+      const style = localStorage.getItem('mouseStyle') || 'laser';
+      const primaryColor = localStorage.getItem('mousePrimaryColor') || '#dc2626';
+      const secondaryColor = localStorage.getItem('mouseSecondaryColor') || '#ef4444';
+
+      // Update UI elements to reflect current settings
+      document.getElementById('customMouseSwitch').checked = isEnabled;
+      document.getElementById('mouseStyleSelect').value = style;
+      updateMouseStyle(); // Update preview
+      document.getElementById('mousePrimaryColor').value = primaryColor;
+      document.getElementById('mouseSecondaryColor').value = secondaryColor;
+      document.documentElement.style.setProperty('--mouse-primary', primaryColor);
+      document.documentElement.style.setProperty('--mouse-secondary', secondaryColor);
+      document.getElementById('mouseColorPreview').style.background = primaryColor;
+      document.getElementById('mouseColorPreview').style.boxShadow = `0 0 10px ${secondaryColor}, 0 0 20px ${secondaryColor}`;
+
+      // Apply or remove the custom cursor style
+      const existingStyle = document.getElementById('custom-mouse-style');
+      if (existingStyle) {
+        existingStyle.remove();
+      }
+
+      if (isEnabled) {
+        const styleEl = document.createElement('style');
+        styleEl.id = 'custom-mouse-style';
+        let cursorDataUrl = "";
+        if (style === 'laser') {
+            // Laser Pointer SVG
+            cursorDataUrl = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8' fill='${encodeURIComponent(primaryColor)}'/%3E%3Ccircle cx='12' cy='12' r='4' fill='${encodeURIComponent(secondaryColor)}'/%3E%3C/svg%3E") 12 12, auto`;
+        } else if (style === 'szvy') {
+            // Szvy Cursor SVG (pointier and bigger)
+            cursorDataUrl = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'%3E%3Cpath d='M16,0C7.164,0,0,7.164,0,16s7.164,16,16,16s16-7.164,16-16S24.836,0,16,0z M16,28C9.383,28,4,22.617,4,16S9.383,4,16,4 s12,5.383,12,12S22.617,28,16,28z' fill='${encodeURIComponent(primaryColor)}'/%3E%3Cpath d='M16,6c-5.523,0-10,4.477-10,10s4.477,10,10,10s10-4.477,10-10S21.523,6,16,6z M16,24c-4.418,0-8-3.582-8-8s3.582-8,8-8 s8,3.582,8,8S20.418,24,16,24z' fill='${encodeURIComponent(secondaryColor)}'/%3E%3Cpath d='M16,10c-3.314,0-6,2.686-6,6s2.686,6,6,6s6-2.686,6-6S19.314,10,16,10z M16,20c-2.209,0-4-1.791-4-4s1.791-4,4-4 s4,1.791,4,4S18.209,20,16,20z' fill='${encodeURIComponent(primaryColor)}'/%3E%3C/svg%3E") 0 0, auto`;
+        }
+        styleEl.innerHTML = `* { cursor: ${cursorDataUrl} !important; }`;
+        document.head.appendChild(styleEl);
+      }
+    }
+
     /* =============== ON LOAD (restore cloak + panic + background + theme + proxy) =============== */
     window.addEventListener('load',async ()=>{
       await dbOpen();
       // Merge from IDB to localStorage if missing (survive cookie-only clears)
-      const keysToHydrate=['username','authLoggedIn','cloakedTitle','cloakedFavicon','panicUrl','customBgUrl','selectedProxy','searchEngine','theme','particles','currentTab','adblock','loadEvery','appSearchQuery','lastApp'];
+      const keysToHydrate=['username','authLoggedIn','cloakedTitle','cloakedFavicon','panicUrl','customBgUrl','selectedProxy','searchEngine','theme','particles','currentTab','adblock','loadEvery','appSearchQuery','lastApp', 'customMouseEnabled', 'mouseStyle', 'mousePrimaryColor', 'mouseSecondaryColor'];
       for(const k of keysToHydrate){
           const v = await dbGet(k);
           if(v!==undefined && localStorage.getItem(k)===null){
@@ -980,12 +1207,19 @@
       // Restore last app
       const last=localStorage.getItem('lastApp'); if(last){ const f=document.getElementById('appsFrame'); if(f) f.src=last; }
       // Auto unlock if logged in (IDB survives cookie delete)
-      const logged = localStorage.getItem('authLoggedIn')==='true'; if(logged){ unlock(); }
+      // FIX: Syntax error corrected here (logged -> loggeAndd)
+      const loggeAndd = localStorage.getItem('authLoggedIn')==='true'; if(loggeAndd){ unlock(); }
       // Restore tab
       const tab=localStorage.getItem('currentTab'); if(tab){ const btn=[...document.querySelectorAll('.tabBtn')].find(b=>b.getAttribute('onclick')?.includes(tab)); if(btn){ showTab(tab,btn); } else { showTab('homeTab', document.querySelector('.tabBtn')); } }
+
+      // Apply custom mouse styles on load
+      applyCustomMouseStyles();
     });
     /* =============== LEAVE SITE PROTECTION =============== */
-    window.addEventListener('beforeunload', function(e){ e.preventDefault(); e.returnValue='Changes you made may not be saved.'; });
+    window.addEventListener('beforeunload', function(e){
+      e.preventDefault();
+      e.returnValue='Changes you made may not be saved.';
+    });
   </script>
 </body>
 </html>
